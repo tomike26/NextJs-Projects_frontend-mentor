@@ -2,6 +2,12 @@
 import { useState } from "react";
 import faqs from "../util/faqs";
 
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export default function Home() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
@@ -16,7 +22,7 @@ export default function Home() {
           <img src="./images/icon-star.svg" />
           <h1>FAQs</h1>
         </div>
-        {faqs.map((faq: any, index: number) => (
+        {faqs.map((faq: FAQ, index: number) => (
           <div className="faq-questions" key={index}>
             <div
               className={`faq-wrapper ${expanded === index ? "active" : ""}`}
