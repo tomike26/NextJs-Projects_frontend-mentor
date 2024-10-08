@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: #FFF5E4;
+  overflow-x: hidden;
+}
+
+/*Component*/
+@import  './components/landing.css'
